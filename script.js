@@ -12,6 +12,8 @@ for(let i = 0; i < 5; i++)
 //Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 setTimeout(inserisciNumero,30000);  //dopo i 30 secondi richiamo la funzione per far inserire da parte dell'utente un numero
 
+
+
 function inserisciNumero()
 {
     const arrayNumeriUtente = [];   //inizializzo un array vuoto che sarà destinato a contenere i cinque numeri inseriti dall'utente
@@ -26,7 +28,7 @@ function inserisciNumero()
     }
     console.log(arrayNumeriUtente); //stampo in console l'array dei cinque numeri forniti dall'utente
 
-    //Dopo che sono stati inseriti i 5 numeri, il software dice quanti dei numeri da indovinare sono stati individuati
+    
     let numeriIndovinatiDallUtente = 0;
     const arrayNumeriIndovinati = [];   //inserirò gli eventuali numeri indovinati dall'utente
     for(let i = 0; i < arrayNumeriUtente.length; i++)   //ciclo per tutta la lunghezza dell'array dei numeri inseriti
@@ -37,9 +39,13 @@ function inserisciNumero()
                                                                       nuemeri generati random allora incremento la variabile
                                                                       che tiene il conto di quanti siano i numeri indovinati dall'utente*/
             {
-                numeriIndovinatiDallUtente++;
+                numeriIndovinatiDallUtente += numeriIndovinatiDallUtente;
                 arrayNumeriIndovinati.push(arrayNumeriDaIndovinare[i]);
             }
     }
     console.log('Hai indovinato ' + `${numeriIndovinatiDallUtente}` + " numeri");
+    if(numeriIndovinatiDallUtente > 0)
+    {
+        console.log('I numeri da te indovinati sono' + " " + arrayNumeriIndovinati);
+    }
 }
