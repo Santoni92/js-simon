@@ -39,7 +39,7 @@ function inserisciNumero()
                                                                       nuemeri generati random allora incremento la variabile
                                                                       che tiene il conto di quanti siano i numeri indovinati dall'utente*/
             {
-                numeriIndovinatiDallUtente += numeriIndovinatiDallUtente;
+                numeriIndovinatiDallUtente++;
                 arrayNumeriIndovinati.push(arrayNumeriDaIndovinare[i]);
             }
     }
